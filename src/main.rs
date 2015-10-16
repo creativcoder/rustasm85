@@ -2,47 +2,42 @@ use std::io::prelude::*;
 use std::fs::File;
 use std::thread::spawn;
 
-fn scan_opcode(s:&str) {
-    match s {
-        "mvia" => println!("opcode"),
-          _ => println!("Invalid Opcode"),
-    }
+enum Register {
+    BIT_8(u8),
+    BIT_16(u16),
+    None,
 }
 
-fn length_of(s:&str) -> usize {
-    s.len()
+use Register::{BIT_8,BIT_16};
+
+enum Opcodes {
+
 }
 
-fn loop_plain(s:&str) {
+struct CPU {
 
-    for i in s.chars() {
-            if i == '\n' {println!("");}
-            print!("{:?}",i);
-    }
+    A:Register,
+    BC:(Register,Register),
+    DE:(Register,Register),
+    HL:(Register,Register),
+    PC:Register,
+    SP:Register,
 }
 
-fn loop_scanned(s:&str,cnt:&i32) {
+struct Flag {
+    S:u8,
+    Z:u8,
+    AC:u8,
+    P:u8,
+    C:u8,
+}
 
-    for i in s.chars() {
-            print!("{:?}",i);
+impl CPU {
+    fn new() -> Self {
+        CPU {A:BIT_8(0),BC:(BIT_8(0),BIT_8(0)),DE:(BIT_8(0),BIT_8(0)),HL:(BIT_8(0),BIT_8(0)),PC:BIT_16(0),SP:BIT_16(0)}
     }
 }
 
 fn main() {
-
-   // let op_mvi_a = 34;
-   // let op_mov_a_b = 47;
-    //let op_df = 0xdf;
-    
-    fn process_asm() -> std::io::Result<()> {
-    let mut f = try!(File::open("code.asm"));
-    let mut s = String::new();
-    let mut cnt = 0;
-    try!(f.read_to_string(&mut s));
-    loop_plain(&s);
-    println!("The length of string is  {:?}",length_of(&s));
-    Ok(())
-    }
-
-    process_asm();
+    let cpu = CPU::new();
 }
