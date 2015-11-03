@@ -1,0 +1,251 @@
+1.  ACI Data CE 2 
+2.  ADC A 8F 1 
+3.  ADC B 88 1 
+4.  ADC C 89 1 
+5.  ADC D 8A 1 
+6.  ADC E 8B 1 
+7.  ADC H 8C 1 
+8.  ADC L 8D 1 
+9.  ADC M 8E 1 
+10.  ADD A 87 1 
+11.  ADD B 80 1 
+12.  ADD C 81 1 
+13.  ADD D  82 1 
+14.  ADD E  83 1 
+15.  ADD H 84 1 
+16.  ADD L 85 1 
+17.  ADD M 86 1 
+18.  ADI Data C6 2 
+19.  ANA A A7 1 
+20.  ANA B A0 1 
+21.  ANA C A1 1 
+22.  ANA D A2 1 
+23.  ANA E A3 1 
+24.  ANA H A4 1 
+25.  ANA L A5 1 
+26.  ANA M A6 1 
+27.  ANI Data  E6 2 
+28.  CALL Label CD 3 
+29.  CC Label DC 3 
+30.  CM Label FC 3 
+31.  CMA  2F 1 
+32.  CMC 3F 1 
+33.  CMP A BF 1 
+34.  CMP B B8 1 
+35.  CMP C B9 1 
+36.  CMP D BA 1 
+37.  CMP E BB 1 
+38.  CMP H BC 1 
+39.  CMP L BD 1 
+40.  CMP M BD 1 
+41.  CNC Label D4 3 
+42.  CNZ Label C4 3 
+www.eazynotes.com Gursharan Singh Tatla Page 2 of 6   Sr. No. Mnemonics, Operand Opcode Bytes 
+43.  CP Label F4 3 
+44.  CPE Label EC 3 
+45.  CPI Data FE 2 
+46.  CPO Label E4 3 
+47.  CZ Label CC 3 
+48.  DAA  27 1 
+49.  DAD B 09 1 
+50.  DAD D  19 1 
+51.  DAD H 29 1 
+52.  DAD SP 39 1 
+53.  DCR A 3D 1 
+54.  DCR B 05 1 
+55.  DCR C 0D 1 
+56.  DCR D 15 1 
+57.  DCR E 1D 1 
+58.  DCR H 25 1 
+59.  DCR L 2D 1 
+60.  DCR M 35 1 
+61.  DCX B 0B 1 
+62.  DCX D 1B 1 
+63.  DCX H 2B 1 
+64.  DCX SP 3B 1 
+65.  DI F3 1 
+66.  EI FB 1 
+67.  HLT 76 1 
+68.  IN Port-address DB 2 
+69.  INR A 3C 1 
+70.  INR B 04 1 
+71.  INR C 0C 1 
+72.  INR D 14 1 
+73.  INR E 1C 1 
+74.  INR H 24 1 
+75.  INR L 2C 1 
+76.  INR M 34 1 
+77.  INX B 03 1 
+78.  INX D  13 1 
+79.  INX H 23 1 
+80.  INX SP 33 1 
+81.  JC Label DA 3 
+82.  JM Label FA 3 
+83.  JMP Label C3 3 
+84.  JNC Label D2 3 
+85.  JNZ Label C2 3 
+86.  JP Label F2 3 
+87.  JPE Label EA 3 
+88.  JPO Label E2 3 
+89.  JZ Label CA 3 
+www.eazynotes.com Gursharan Singh Tatla Page 3 of 6   Sr. No. Mnemonics, Operand Opcode Bytes 
+90.  LDA Address 3A 3 
+91.  LDAX B 0A 1 
+92.  LDAX D 1A 1 
+93.  LHLD Address 2A 3 
+94.  LXI B 01 3 
+95.  LXI D 11 3 
+96.  LXI H 21 3 
+97.  LXI SP 31 3 
+98.  MOV A, A 7F 1 
+99.  MOV A, B 78 1 
+100.  MOV A, C 79 1 
+101.  MOV A, D 7A 1 
+102.  MOV A, E 7B 1 
+103.  MOV A, H 7C 1 
+104.  MOV A, L 7D 1 
+105.  MOV A, M  7E 1 
+106.  MOV B, A 47 1 
+107.  MOV B, B 40 1 
+108.  MOV B, C 41 1 
+109.  MOV B, D 42 1 
+110.  MOV B, E 43 1 
+111.  MOV B, H 44 1 
+112.  MOV B, L 45 1 
+113.  MOV B, M 46 1 
+114.  MOV C, A 4F 1 
+115.  MOV C, B 48 1 
+116.  MOV C, C  49 1 
+117.  MOV C, D 4A 1 
+118.  MOV C, E 4B 1 
+119.  MOV C, H 4C 1 
+120.  MOV C, L 4D 1 
+121.  MOV C, M 4E 1 
+122.  MOV D, A 57 1 
+123.  MOV D, B 50 1 
+124.  MOV D, C 51 1 
+125.  MOV D, D 52 1 
+126.  MOV D, E 53 1 
+127.  MOV D, H 54 1 
+128.  MOV D, L 55 1 
+129.  MOV D, M 56 1 
+130.  MOV E, A 5F 1 
+131.  MOV E, B 58 1 
+132.  MOV E, C 59 1 
+133.  MOV E, D 5A 1 
+134.  MOV E, E 5B 1 
+135.  MOV E, H 5C 1 
+136.  MOV E, L 5D 1 
+www.eazynotes.com Gursharan Singh Tatla Page 4 of 6   Sr. No. Mnemonics, Operand Opcode Bytes 
+137.  MOV E, M 5E 1 
+138.  MOV H, A 67 1 
+139.  MOV H, B 60 1 
+140.  MOV H, C 61 1 
+141.  MOV H, D 62 1 
+142.  MOV H, E 63 1 
+143.  MOV H, H 64 1 
+144.  MOV H, L 65 1 
+145.  MOV H, M 66 1 
+146.  MOV L, A 6F 1 
+147.  MOV L, B  68 1 
+148.  MOV L, C 69 1 
+149.  MOV L, D 6A 1 
+150.  MOV L, E 6B 1 
+151.  MOV L, H 6C 1 
+152.  MOV L, L 6D 1 
+153.  MOV L, M 6E 1 
+154.  MOV M, A 77 1 
+155.  MOV M, B 70 1 
+156.  MOV M, C 71 1 
+157.  MOV M, D 72 1 
+158.  MOV M, E 73 1 
+159.  MOV M, H 74 1 
+160.  MOV M, L 75 1 
+161.  MVI A, Data 3E 2 
+162.  MVI B, Data 06 2 
+163.  MVI C, Data 0E 2 
+164.  MVI D, Data 16 2 
+165.  MVI E, Data 1E 2 
+166.  MVI H, Data 26 2 
+167.  MVI L, Data 2E 2 
+168.  MVI M, Data 36 2 
+169.  NOP 00 1 
+170.  ORA A B7 1 
+171.  ORA B B0 1 
+172.  ORA C B1 1 
+173.  ORA D B2 1 
+174.  ORA E B3 1 
+175.  ORA H B4 1 
+176.  ORA L B5 1 
+177.  ORA M B6 1 
+178.  ORI Data F6 2 
+179.  OUT Port-Address D3 2 
+180.  PCHL E9 1 
+181.  POP B C1 1 
+182.  POP D D1 1 
+183.  POP H E1 1 
+www.eazynotes.com Gursharan Singh Tatla Page 5 of 6   Sr. No. Mnemonics, Operand Opcode Bytes 
+184.  POP PSW F1 1 
+185.  PUSH B C5 1 
+186.  PUSH D D5 1 
+187.  PUSH H E5 1 
+188.  PUSH PSW F5 1 
+189.  RAL 17 1 
+190.  RAR 1F 1 
+191.  RC D8 1 
+192.  RET C9 1 
+193.  RIM 20 1 
+194.  RLC  07 1 
+195.  RM F8 1 
+196.  RNC D0 1 
+197.  RNZ C0 1 
+198.  RP F0 1 
+199.  RPE E8 1 
+200.  RPO E0 1 
+201.  RRC 0F 1 
+202.  RST 0 C7 1 
+203.  RST 1 CF 1 
+204.  RST 2 D7 1 
+205.  RST 3 DF 1 
+206.  RST 4 E7 1 
+207.  RST 5 EF 1 
+208.  RST 6 F7 1 
+209.  RST 7 FF 1 
+210.  RZ C8 1 
+211.  SBB A 9F 1 
+212.  SBB B 98 1 
+213.  SBB C 99 1 
+214.  SBB D 9A 1 
+215.  SBB E 9B 1 
+216.  SBB H 9C 1 
+217.  SBB L 9D 1 
+218.  SBB M 9E 1 
+219.  SBI Data DE 2 
+220.  SHLD Address 22 3 
+221.  SIM 30 1 
+222.  SPHL F9 1 
+223.  STA Address 32 3 
+224.  STAX B 02 1 
+225.  STAX D 12 1 
+226.  STC 37 1 
+227.  SUB A 97 1 
+228.  SUB B 90 1 
+229.  SUB C  91 1 
+230.  SUB D 92 1 
+www.eazynotes.com Gursharan Singh Tatla Page 6 of 6   Sr. No. Mnemonics, Operand Opcode Bytes 
+231.  SUB E 93 1 
+232.  SUB H  94 1 
+233.  SUB L 95 1 
+234.  SUB M 96 1 
+235.  SUI Data D6 2 
+236.  XCHG EB 1 
+237.  XRA A AF 1 
+238.  XRA B A8 1 
+239.  XRA C A9 1 
+240.  XRA D AA 1 
+241.  XRA E AB 1 
+242.  XRA H AC 1 
+243.  XRA L AD 1 
+244.  XRA M AE 1 
+245.  XRI Data EE 2 
+246.  XTHL E3 1  
