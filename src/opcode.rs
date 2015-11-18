@@ -1,4 +1,7 @@
-const /*1.*/ ACI Data CE /*2*/
+
+pub const lxi_h:(&'static str,u8) = ("lxi h",21);
+
+/*const /*1.*/ ACI Data CE /*2*/
 const /*2.*/ ADC A 8F /*1*/
 const /*3.*/ ADC B 88 /*1*/
 const /*4.*/ ADC C 89 /*1*/
@@ -249,4 +252,4 @@ const /*246.*/ XTHL E3 /*1*/
 #[test]
 fn test_opcodes() {
 	println!("test suite for opcodes");
-}
+}*/

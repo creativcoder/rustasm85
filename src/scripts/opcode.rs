@@ -1,246 +1,246 @@
-const /*1.*/ ACI Data CE /*2*/
-const /*2.*/ ADC A 8F /*1*/
-const /*3.*/ ADC B 88 /*1*/
-const /*4.*/ ADC C 89 /*1*/
-const /*5.*/ ADC D 8A /*1*/
-const /*6.*/ ADC E 8B /*1*/
-const /*7.*/ ADC H 8C /*1*/
-const /*8.*/ ADC L 8D /*1*/
-const /*9.*/ ADC M 8E /*1*/
-const /*10.*/ ADD A 87 /*1*/
-const /*11.*/ ADD B 80 /*1*/
-const /*12.*/ ADD C 81 /*1*/
-const /*13.*/ ADD D 82 /*1*/
-const /*14.*/ ADD E 83 /*1*/
-const /*15.*/ ADD H 84 /*1*/
-const /*16.*/ ADD L 85 /*1*/
-const /*17.*/ ADD M 86 /*1*/
-const /*18.*/ ADI Data C6 /*2*/
-const /*19.*/ ANA A A7 /*1*/
-const /*20.*/ ANA B A0 /*1*/
-const /*21.*/ ANA C A1 /*1*/
-const /*22.*/ ANA D A2 /*1*/
-const /*23.*/ ANA E A3 /*1*/
-const /*24.*/ ANA H A4 /*1*/
-const /*25.*/ ANA L A5 /*1*/
-const /*26.*/ ANA M A6 /*1*/
-const /*27.*/ ANI Data E6 /*2*/
-const /*28.*/ CALL Label CD /*3*/
-const /*29.*/ CC Label DC /*3*/
-const /*30.*/ CM Label FC /*3*/
-const /*31.*/ CMA 2F /*1*/
-const /*32.*/ CMC 3F /*1*/
-const /*33.*/ CMP A BF /*1*/
-const /*34.*/ CMP B B8 /*1*/
-const /*35.*/ CMP C B9 /*1*/
-const /*36.*/ CMP D BA /*1*/
-const /*37.*/ CMP E BB /*1*/
-const /*38.*/ CMP H BC /*1*/
-const /*39.*/ CMP L BD /*1*/
-const /*40.*/ CMP M BD /*1*/
-const /*41.*/ CNC Label D4 /*3*/
-const /*42.*/ CNZ Label C4 /*3*/
-const /*43.*/ CP Label F4 /*3*/
-const /*44.*/ CPE Label EC /*3*/
-const /*45.*/ CPI Data FE /*2*/
-const /*46.*/ CPO Label E4 /*3*/
-const /*47.*/ CZ Label CC /*3*/
-const /*48.*/ DAA 27 /*1*/
-const /*49.*/ DAD B 09 /*1*/
-const /*50.*/ DAD D 19 /*1*/
-const /*51.*/ DAD H 29 /*1*/
-const /*52.*/ DAD SP 39 /*1*/
-const /*53.*/ DCR A 3D /*1*/
-const /*54.*/ DCR B 05 /*1*/
-const /*55.*/ DCR C 0D /*1*/
-const /*56.*/ DCR D 15 /*1*/
-const /*57.*/ DCR E 1D /*1*/
-const /*58.*/ DCR H 25 /*1*/
-const /*59.*/ DCR L 2D /*1*/
-const /*60.*/ DCR M 35 /*1*/
-const /*61.*/ DCX B 0B /*1*/
-const /*62.*/ DCX D 1B /*1*/
-const /*63.*/ DCX H 2B /*1*/
-const /*64.*/ DCX SP 3B /*1*/
-const /*65.*/ DI F3 /*1*/
-const /*66.*/ EI FB /*1*/
-const /*67.*/ HLT 76 /*1*/
-const /*68.*/ IN Port-address DB /*2*/
-const /*69.*/ INR A 3C /*1*/
-const /*70.*/ INR B 04 /*1*/
-const /*71.*/ INR C 0C /*1*/
-const /*72.*/ INR D 14 /*1*/
-const /*73.*/ INR E 1C /*1*/
-const /*74.*/ INR H 24 /*1*/
-const /*75.*/ INR L 2C /*1*/
-const /*76.*/ INR M 34 /*1*/
-const /*77.*/ INX B 03 /*1*/
-const /*78.*/ INX D 13 /*1*/
-const /*79.*/ INX H 23 /*1*/
-const /*80.*/ INX SP 33 /*1*/
-const /*81.*/ JC Label DA /*3*/
-const /*82.*/ JM Label FA /*3*/
-const /*83.*/ JMP Label C3 /*3*/
-const /*84.*/ JNC Label D2 /*3*/
-const /*85.*/ JNZ Label C2 /*3*/
-const /*86.*/ JP Label F2 /*3*/
-const /*87.*/ JPE Label EA /*3*/
-const /*88.*/ JPO Label E2 /*3*/
-const /*89.*/ JZ Label CA /*3*/
-const /*90.*/ LDA Address 3A /*3*/
-const /*91.*/ LDAX B 0A /*1*/
-const /*92.*/ LDAX D 1A /*1*/
-const /*93.*/ LHLD Address 2A /*3*/
-const /*94.*/ LXI B 01 /*3*/
-const /*95.*/ LXI D 11 /*3*/
-const /*96.*/ LXI H 21 /*3*/
-const /*97.*/ LXI SP 31 /*3*/
-const /*98.*/ MOV A, A 7F /*1*/
-const /*99.*/ MOV A, B 78 /*1*/
-const /*100.*/ MOV A, C 79 /*1*/
-const /*101.*/ MOV A, D 7A /*1*/
-const /*102.*/ MOV A, E 7B /*1*/
-const /*103.*/ MOV A, H 7C /*1*/
-const /*104.*/ MOV A, L 7D /*1*/
-const /*105.*/ MOV A, M 7E /*1*/
-const /*106.*/ MOV B, A 47 /*1*/
-const /*107.*/ MOV B, B 40 /*1*/
-const /*108.*/ MOV B, C 41 /*1*/
-const /*109.*/ MOV B, D 42 /*1*/
-const /*110.*/ MOV B, E 43 /*1*/
-const /*111.*/ MOV B, H 44 /*1*/
-const /*112.*/ MOV B, L 45 /*1*/
-const /*113.*/ MOV B, M 46 /*1*/
-const /*114.*/ MOV C, A 4F /*1*/
-const /*115.*/ MOV C, B 48 /*1*/
-const /*116.*/ MOV C, C 49 /*1*/
-const /*117.*/ MOV C, D 4A /*1*/
-const /*118.*/ MOV C, E 4B /*1*/
-const /*119.*/ MOV C, H 4C /*1*/
-const /*120.*/ MOV C, L 4D /*1*/
-const /*121.*/ MOV C, M 4E /*1*/
-const /*122.*/ MOV D, A 57 /*1*/
-const /*123.*/ MOV D, B 50 /*1*/
-const /*124.*/ MOV D, C 51 /*1*/
-const /*125.*/ MOV D, D 52 /*1*/
-const /*126.*/ MOV D, E 53 /*1*/
-const /*127.*/ MOV D, H 54 /*1*/
-const /*128.*/ MOV D, L 55 /*1*/
-const /*129.*/ MOV D, M 56 /*1*/
-const /*130.*/ MOV E, A 5F /*1*/
-const /*131.*/ MOV E, B 58 /*1*/
-const /*132.*/ MOV E, C 59 /*1*/
-const /*133.*/ MOV E, D 5A /*1*/
-const /*134.*/ MOV E, E 5B /*1*/
-const /*135.*/ MOV E, H 5C /*1*/
-const /*136.*/ MOV E, L 5D /*1*/
-const /*137.*/ MOV E, M 5E /*1*/
-const /*138.*/ MOV H, A 67 /*1*/
-const /*139.*/ MOV H, B 60 /*1*/
-const /*140.*/ MOV H, C 61 /*1*/
-const /*141.*/ MOV H, D 62 /*1*/
-const /*142.*/ MOV H, E 63 /*1*/
-const /*143.*/ MOV H, H 64 /*1*/
-const /*144.*/ MOV H, L 65 /*1*/
-const /*145.*/ MOV H, M 66 /*1*/
-const /*146.*/ MOV L, A 6F /*1*/
-const /*147.*/ MOV L, B 68 /*1*/
-const /*148.*/ MOV L, C 69 /*1*/
-const /*149.*/ MOV L, D 6A /*1*/
-const /*150.*/ MOV L, E 6B /*1*/
-const /*151.*/ MOV L, H 6C /*1*/
-const /*152.*/ MOV L, L 6D /*1*/
-const /*153.*/ MOV L, M 6E /*1*/
-const /*154.*/ MOV M, A 77 /*1*/
-const /*155.*/ MOV M, B 70 /*1*/
-const /*156.*/ MOV M, C 71 /*1*/
-const /*157.*/ MOV M, D 72 /*1*/
-const /*158.*/ MOV M, E 73 /*1*/
-const /*159.*/ MOV M, H 74 /*1*/
-const /*160.*/ MOV M, L 75 /*1*/
-const /*161.*/ MVI A, Data 3E /*2*/
-const /*162.*/ MVI B, Data 06 /*2*/
-const /*163.*/ MVI C, Data 0E /*2*/
-const /*164.*/ MVI D, Data 16 /*2*/
-const /*165.*/ MVI E, Data 1E /*2*/
-const /*166.*/ MVI H, Data 26 /*2*/
-const /*167.*/ MVI L, Data 2E /*2*/
-const /*168.*/ MVI M, Data 36 /*2*/
-const /*169.*/ NOP 00 /*1*/
-const /*170.*/ ORA A B7 /*1*/
-const /*171.*/ ORA B B0 /*1*/
-const /*172.*/ ORA C B1 /*1*/
-const /*173.*/ ORA D B2 /*1*/
-const /*174.*/ ORA E B3 /*1*/
-const /*175.*/ ORA H B4 /*1*/
-const /*176.*/ ORA L B5 /*1*/
-const /*177.*/ ORA M B6 /*1*/
-const /*178.*/ ORI Data F6 /*2*/
-const /*179.*/ OUT Port-Address D3 /*2*/
-const /*180.*/ PCHL E9 /*1*/
-const /*181.*/ POP B C1 /*1*/
-const /*182.*/ POP D D1 /*1*/
-const /*183.*/ POP H E1 /*1*/
-const /*184.*/ POP PSW F1 /*1*/
-const /*185.*/ PUSH B C5 /*1*/
-const /*186.*/ PUSH D D5 /*1*/
-const /*187.*/ PUSH H E5 /*1*/
-const /*188.*/ PUSH PSW F5 /*1*/
-const /*189.*/ RAL 17 /*1*/
-const /*190.*/ RAR 1F /*1*/
-const /*191.*/ RC D8 /*1*/
-const /*192.*/ RET C9 /*1*/
-const /*193.*/ RIM 20 /*1*/
-const /*194.*/ RLC 07 /*1*/
-const /*195.*/ RM F8 /*1*/
-const /*196.*/ RNC D0 /*1*/
-const /*197.*/ RNZ C0 /*1*/
-const /*198.*/ RP F0 /*1*/
-const /*199.*/ RPE E8 /*1*/
-const /*200.*/ RPO E0 /*1*/
-const /*201.*/ RRC 0F /*1*/
-const /*202.*/ RST 0 C7 /*1*/
-const /*203.*/ RST 1 CF /*1*/
-const /*204.*/ RST 2 D7 /*1*/
-const /*205.*/ RST 3 DF /*1*/
-const /*206.*/ RST 4 E7 /*1*/
-const /*207.*/ RST 5 EF /*1*/
-const /*208.*/ RST 6 F7 /*1*/
-const /*209.*/ RST 7 FF /*1*/
-const /*210.*/ RZ C8 /*1*/
-const /*211.*/ SBB A 9F /*1*/
-const /*212.*/ SBB B 98 /*1*/
-const /*213.*/ SBB C 99 /*1*/
-const /*214.*/ SBB D 9A /*1*/
-const /*215.*/ SBB E 9B /*1*/
-const /*216.*/ SBB H 9C /*1*/
-const /*217.*/ SBB L 9D /*1*/
-const /*218.*/ SBB M 9E /*1*/
-const /*219.*/ SBI Data DE /*2*/
-const /*220.*/ SHLD Address 22 /*3*/
-const /*221.*/ SIM 30 /*1*/
-const /*222.*/ SPHL F9 /*1*/
-const /*223.*/ STA Address 32 /*3*/
-const /*224.*/ STAX B 02 /*1*/
-const /*225.*/ STAX D 12 /*1*/
-const /*226.*/ STC 37 /*1*/
-const /*227.*/ SUB A 97 /*1*/
-const /*228.*/ SUB B 90 /*1*/
-const /*229.*/ SUB C 91 /*1*/
-const /*230.*/ SUB D 92 /*1*/
-const /*231.*/ SUB E 93 /*1*/
-const /*232.*/ SUB H 94 /*1*/
-const /*233.*/ SUB L 95 /*1*/
-const /*234.*/ SUB M 96 /*1*/
-const /*235.*/ SUI Data D6 /*2*/
-const /*236.*/ XCHG EB /*1*/
-const /*237.*/ XRA A AF /*1*/
-const /*238.*/ XRA B A8 /*1*/
-const /*239.*/ XRA C A9 /*1*/
-const /*240.*/ XRA D AA /*1*/
-const /*241.*/ XRA E AB /*1*/
-const /*242.*/ XRA H AC /*1*/
-const /*243.*/ XRA L AD /*1*/
-const /*244.*/ XRA M AE /*1*/
-const /*245.*/ XRI Data EE /*2*/
-const /*246.*/ XTHL E3 /*1*/
+pub const aci_data:(&'static str,u8) = ("aci data",CE);
+pub const adc_a:(&'static str,u8) = ("adc a",8F);
+pub const adc_b:(&'static str,u8) = ("adc b",88);
+pub const adc_c:(&'static str,u8) = ("adc c",89);
+pub const adc_d:(&'static str,u8) = ("adc d",8A);
+pub const adc_e:(&'static str,u8) = ("adc e",8B);
+pub const adc_h:(&'static str,u8) = ("adc h",8C);
+pub const adc_l:(&'static str,u8) = ("adc l",8D);
+pub const adc_m:(&'static str,u8) = ("adc m",8E);
+pub const add_a:(&'static str,u8) = ("add a",87);
+pub const add_b:(&'static str,u8) = ("add b",80);
+pub const add_c:(&'static str,u8) = ("add c",81);
+pub const add_d:(&'static str,u8) = ("add d",82);
+pub const add_e:(&'static str,u8) = ("add e",83);
+pub const add_h:(&'static str,u8) = ("add h",84);
+pub const add_l:(&'static str,u8) = ("add l",85);
+pub const add_m:(&'static str,u8) = ("add m",86);
+pub const adi_data:(&'static str,u8) = ("adi data",C6);
+pub const ana_a:(&'static str,u8) = ("ana a",A7);
+pub const ana_b:(&'static str,u8) = ("ana b",A0);
+pub const ana_c:(&'static str,u8) = ("ana c",A1);
+pub const ana_d:(&'static str,u8) = ("ana d",A2);
+pub const ana_e:(&'static str,u8) = ("ana e",A3);
+pub const ana_h:(&'static str,u8) = ("ana h",A4);
+pub const ana_l:(&'static str,u8) = ("ana l",A5);
+pub const ana_m:(&'static str,u8) = ("ana m",A6);
+pub const ani_data:(&'static str,u8) = ("ani data",E6);
+pub const call_label:(&'static str,u8) = ("call label",CD);
+pub const cc_label:(&'static str,u8) = ("cc label",DC);
+pub const cm_label:(&'static str,u8) = ("cm label",FC);
+pub const cma_2f:(&'static str,u8) = ("cma",2F);
+pub const cmc_3f:(&'static str,u8) = ("cmc",3F);
+pub const cmp_a:(&'static str,u8) = ("cmp a",BF);
+pub const cmp_b:(&'static str,u8) = ("cmp b",B8);
+pub const cmp_c:(&'static str,u8) = ("cmp c",B9);
+pub const cmp_d:(&'static str,u8) = ("cmp d",BA);
+pub const cmp_e:(&'static str,u8) = ("cmp e",BB);
+pub const cmp_h:(&'static str,u8) = ("cmp h",BC);
+pub const cmp_l:(&'static str,u8) = ("cmp l",BD);
+pub const cmp_m:(&'static str,u8) = ("cmp m",BD);
+pub const cnc_label:(&'static str,u8) = ("cnc label",D4);
+pub const cnz_label:(&'static str,u8) = ("cnz label",C4);
+pub const cp_label:(&'static str,u8) = ("cp label",F4);
+pub const cpe_label:(&'static str,u8) = ("cpe label",EC);
+pub const cpi_data:(&'static str,u8) = ("cpi data",FE);
+pub const cpo_label:(&'static str,u8) = ("cpo label",E4);
+pub const cz_label:(&'static str,u8) = ("cz label",CC);
+pub const daa_27:(&'static str,u8) = ("daa",27);
+pub const dad_b:(&'static str,u8) = ("dad b",09);
+pub const dad_d:(&'static str,u8) = ("dad d",19);
+pub const dad_h:(&'static str,u8) = ("dad h",29);
+pub const dad_sp:(&'static str,u8) = ("dad sp",39);
+pub const dcr_a:(&'static str,u8) = ("dcr a",3D);
+pub const dcr_b:(&'static str,u8) = ("dcr b",05);
+pub const dcr_c:(&'static str,u8) = ("dcr c",0D);
+pub const dcr_d:(&'static str,u8) = ("dcr d",15);
+pub const dcr_e:(&'static str,u8) = ("dcr e",1D);
+pub const dcr_h:(&'static str,u8) = ("dcr h",25);
+pub const dcr_l:(&'static str,u8) = ("dcr l",2D);
+pub const dcr_m:(&'static str,u8) = ("dcr m",35);
+pub const dcx_b:(&'static str,u8) = ("dcx b",0B);
+pub const dcx_d:(&'static str,u8) = ("dcx d",1B);
+pub const dcx_h:(&'static str,u8) = ("dcx h",2B);
+pub const dcx_sp:(&'static str,u8) = ("dcx sp",3B);
+pub const di_f3:(&'static str,u8) = ("di",f3);
+pub const ei_fb:(&'static str,u8) = ("ei",fb);
+pub const hlt_76:(&'static str,u8) = ("hlt",76);
+pub const in_port-address:(&'static str,u8) = ("in port-address",DB);
+pub const inr_a:(&'static str,u8) = ("inr a",3C);
+pub const inr_b:(&'static str,u8) = ("inr b",04);
+pub const inr_c:(&'static str,u8) = ("inr c",0C);
+pub const inr_d:(&'static str,u8) = ("inr d",14);
+pub const inr_e:(&'static str,u8) = ("inr e",1C);
+pub const inr_h:(&'static str,u8) = ("inr h",24);
+pub const inr_l:(&'static str,u8) = ("inr l",2C);
+pub const inr_m:(&'static str,u8) = ("inr m",34);
+pub const inx_b:(&'static str,u8) = ("inx b",03);
+pub const inx_d:(&'static str,u8) = ("inx d",13);
+pub const inx_h:(&'static str,u8) = ("inx h",23);
+pub const inx_sp:(&'static str,u8) = ("inx sp",33);
+pub const jc_label:(&'static str,u8) = ("jc label",DA);
+pub const jm_label:(&'static str,u8) = ("jm label",FA);
+pub const jmp_label:(&'static str,u8) = ("jmp label",C3);
+pub const jnc_label:(&'static str,u8) = ("jnc label",D2);
+pub const jnz_label:(&'static str,u8) = ("jnz label",C2);
+pub const jp_label:(&'static str,u8) = ("jp label",F2);
+pub const jpe_label:(&'static str,u8) = ("jpe label",EA);
+pub const jpo_label:(&'static str,u8) = ("jpo label",E2);
+pub const jz_label:(&'static str,u8) = ("jz label",CA);
+pub const lda_address:(&'static str,u8) = ("lda address",3A);
+pub const ldax_b:(&'static str,u8) = ("ldax b",0A);
+pub const ldax_d:(&'static str,u8) = ("ldax d",1A);
+pub const lhld_address:(&'static str,u8) = ("lhld address",2A);
+pub const lxi_b:(&'static str,u8) = ("lxi b",01);
+pub const lxi_d:(&'static str,u8) = ("lxi d",11);
+pub const lxi_h:(&'static str,u8) = ("lxi h",21);
+pub const lxi_sp:(&'static str,u8) = ("lxi sp",31);
+pub const mov_aa:(&'static str,u8) = ("mov a,a",7F);
+pub const mov_ab:(&'static str,u8) = ("mov a,b",78);
+pub const mov_ac:(&'static str,u8) = ("mov a,c",79);
+pub const mov_ad:(&'static str,u8) = ("mov a,d",7A);
+pub const mov_ae:(&'static str,u8) = ("mov a,e",7B);
+pub const mov_ah:(&'static str,u8) = ("mov a,h",7C);
+pub const mov_al:(&'static str,u8) = ("mov a,l",7D);
+pub const mov_am:(&'static str,u8) = ("mov a,m",7E);
+pub const mov_b:(&'static str,u8) = ("mov b,",A);
+pub const mov_b:(&'static str,u8) = ("mov b,",B);
+pub const mov_b:(&'static str,u8) = ("mov b,",C);
+pub const mov_b:(&'static str,u8) = ("mov b,",D);
+pub const mov_b:(&'static str,u8) = ("mov b,",E);
+pub const mov_b:(&'static str,u8) = ("mov b,",H);
+pub const mov_b:(&'static str,u8) = ("mov b,",L);
+pub const mov_b:(&'static str,u8) = ("mov b,",M);
+pub const mov_c:(&'static str,u8) = ("mov c,",A);
+pub const mov_c:(&'static str,u8) = ("mov c,",B);
+pub const mov_c:(&'static str,u8) = ("mov c,",C);
+pub const mov_c:(&'static str,u8) = ("mov c,",D);
+pub const mov_c:(&'static str,u8) = ("mov c,",E);
+pub const mov_c:(&'static str,u8) = ("mov c,",H);
+pub const mov_c:(&'static str,u8) = ("mov c,",L);
+pub const mov_c:(&'static str,u8) = ("mov c,",M);
+pub const mov_d:(&'static str,u8) = ("mov d,",A);
+pub const mov_d:(&'static str,u8) = ("mov d,",B);
+pub const mov_d:(&'static str,u8) = ("mov d,",C);
+pub const mov_d:(&'static str,u8) = ("mov d,",D);
+pub const mov_d:(&'static str,u8) = ("mov d,",E);
+pub const mov_d:(&'static str,u8) = ("mov d,",H);
+pub const mov_d:(&'static str,u8) = ("mov d,",L);
+pub const mov_d:(&'static str,u8) = ("mov d,",M);
+pub const mov_e:(&'static str,u8) = ("mov e,",A);
+pub const mov_e:(&'static str,u8) = ("mov e,",B);
+pub const mov_e:(&'static str,u8) = ("mov e,",C);
+pub const mov_e:(&'static str,u8) = ("mov e,",D);
+pub const mov_e:(&'static str,u8) = ("mov e,",E);
+pub const mov_e:(&'static str,u8) = ("mov e,",H);
+pub const mov_e:(&'static str,u8) = ("mov e,",L);
+pub const mov_e:(&'static str,u8) = ("mov e,",M);
+pub const mov_h:(&'static str,u8) = ("mov h,",A);
+pub const mov_h:(&'static str,u8) = ("mov h,",B);
+pub const mov_h:(&'static str,u8) = ("mov h,",C);
+pub const mov_h:(&'static str,u8) = ("mov h,",D);
+pub const mov_h:(&'static str,u8) = ("mov h,",E);
+pub const mov_h:(&'static str,u8) = ("mov h,",H);
+pub const mov_h:(&'static str,u8) = ("mov h,",L);
+pub const mov_h:(&'static str,u8) = ("mov h,",M);
+pub const mov_l:(&'static str,u8) = ("mov l,",A);
+pub const mov_l:(&'static str,u8) = ("mov l,",B);
+pub const mov_l:(&'static str,u8) = ("mov l,",C);
+pub const mov_l:(&'static str,u8) = ("mov l,",D);
+pub const mov_l:(&'static str,u8) = ("mov l,",E);
+pub const mov_l:(&'static str,u8) = ("mov l,",H);
+pub const mov_l:(&'static str,u8) = ("mov l,",L);
+pub const mov_l:(&'static str,u8) = ("mov l,",M);
+pub const mov_m:(&'static str,u8) = ("mov m,",A);
+pub const mov_m:(&'static str,u8) = ("mov m,",B);
+pub const mov_m:(&'static str,u8) = ("mov m,",C);
+pub const mov_m:(&'static str,u8) = ("mov m,",D);
+pub const mov_m:(&'static str,u8) = ("mov m,",E);
+pub const mov_m:(&'static str,u8) = ("mov m,",H);
+pub const mov_m:(&'static str,u8) = ("mov m,",L);
+pub const mvi_a:(&'static str,u8) = ("mvi a,",Data);
+pub const mvi_b:(&'static str,u8) = ("mvi b,",Data);
+pub const mvi_c:(&'static str,u8) = ("mvi c,",Data);
+pub const mvi_d:(&'static str,u8) = ("mvi d,",Data);
+pub const mvi_e:(&'static str,u8) = ("mvi e,",Data);
+pub const mvi_h:(&'static str,u8) = ("mvi h,",Data);
+pub const mvi_l:(&'static str,u8) = ("mvi l,",Data);
+pub const mvi_m:(&'static str,u8) = ("mvi m,",Data);
+pub const nop:(&'static str,u8) = ("nop",00);
+pub const ora_a:(&'static str,u8) = ("ora a",B7);
+pub const ora_b:(&'static str,u8) = ("ora b",B0);
+pub const ora_c:(&'static str,u8) = ("ora c",B1);
+pub const ora_d:(&'static str,u8) = ("ora d",B2);
+pub const ora_e:(&'static str,u8) = ("ora e",B3);
+pub const ora_h:(&'static str,u8) = ("ora h",B4);
+pub const ora_l:(&'static str,u8) = ("ora l",B5);
+pub const ora_m:(&'static str,u8) = ("ora m",B6);
+pub const ori_data:(&'static str,u8) = ("ori data",F6);
+pub const out_port-address:(&'static str,u8) = ("out port-address",D3);
+pub const pchl:(&'static str,u8) = ("pchl",e9);
+pub const pop_b:(&'static str,u8) = ("pop b",C1);
+pub const pop_d:(&'static str,u8) = ("pop d",D1);
+pub const pop_h:(&'static str,u8) = ("pop h",E1);
+pub const pop_psw:(&'static str,u8) = ("pop psw",F1);
+pub const push_b:(&'static str,u8) = ("push b",C5);
+pub const push_d:(&'static str,u8) = ("push d",D5);
+pub const push_h:(&'static str,u8) = ("push h",E5);
+pub const push_psw:(&'static str,u8) = ("push psw",F5);
+pub const ral_17:(&'static str,u8) = ("ral",17);
+pub const rar_1f:(&'static str,u8) = ("rar",1f);
+pub const rc_d8:(&'static str,u8) = ("rc",d8);
+pub const ret_c9:(&'static str,u8) = ("ret",c9);
+pub const rim_20:(&'static str,u8) = ("rim",20);
+pub const rlc_07:(&'static str,u8) = ("rlc",07);
+pub const rm_f8:(&'static str,u8) = ("rm",f8);
+pub const rnc_d0:(&'static str,u8) = ("rnc",d0);
+pub const rnz_c0:(&'static str,u8) = ("rnz",c0);
+pub const rp_f0:(&'static str,u8) = ("rp",f0);
+pub const rpe_e8:(&'static str,u8) = ("rpe",e8);
+pub const rpo_e0:(&'static str,u8) = ("rpo",e0);
+pub const rrc_0f:(&'static str,u8) = ("rrc",0f);
+pub const rst_0:(&'static str,u8) = ("rst 0",C7);
+pub const rst_1:(&'static str,u8) = ("rst 1",CF);
+pub const rst_2:(&'static str,u8) = ("rst 2",D7);
+pub const rst_3:(&'static str,u8) = ("rst 3",DF);
+pub const rst_4:(&'static str,u8) = ("rst 4",E7);
+pub const rst_5:(&'static str,u8) = ("rst 5",EF);
+pub const rst_6:(&'static str,u8) = ("rst 6",F7);
+pub const rst_7:(&'static str,u8) = ("rst 7",FF);
+pub const rz_c8:(&'static str,u8) = ("rz",c8);
+pub const sbb_a:(&'static str,u8) = ("sbb a",9F);
+pub const sbb_b:(&'static str,u8) = ("sbb b",98);
+pub const sbb_c:(&'static str,u8) = ("sbb c",99);
+pub const sbb_d:(&'static str,u8) = ("sbb d",9A);
+pub const sbb_e:(&'static str,u8) = ("sbb e",9B);
+pub const sbb_h:(&'static str,u8) = ("sbb h",9C);
+pub const sbb_l:(&'static str,u8) = ("sbb l",9D);
+pub const sbb_m:(&'static str,u8) = ("sbb m",9E);
+pub const sbi_data:(&'static str,u8) = ("sbi data",DE);
+pub const shld_address:(&'static str,u8) = ("shld address",22);
+pub const sim_30:(&'static str,u8) = ("sim",30);
+pub const sphl_f9:(&'static str,u8) = ("sphl",f9);
+pub const sta_address:(&'static str,u8) = ("sta address",32);
+pub const stax_b:(&'static str,u8) = ("stax b",02);
+pub const stax_d:(&'static str,u8) = ("stax d",12);
+pub const stc_37:(&'static str,u8) = ("stc 37",1);
+pub const sub_a:(&'static str,u8) = ("sub a",97);
+pub const sub_b:(&'static str,u8) = ("sub b",90);
+pub const sub_c:(&'static str,u8) = ("sub c",91);
+pub const sub_d:(&'static str,u8) = ("sub d",92);
+pub const sub_e:(&'static str,u8) = ("sub e",93);
+pub const sub_h:(&'static str,u8) = ("sub h",94);
+pub const sub_l:(&'static str,u8) = ("sub l",95);
+pub const sub_m:(&'static str,u8) = ("sub m",96);
+pub const sui_data:(&'static str,u8) = ("sui data",D6);
+pub const xchg_eb:(&'static str,u8) = ("xchg eb",1);
+pub const xra_a:(&'static str,u8) = ("xra a",AF);
+pub const xra_b:(&'static str,u8) = ("xra b",A8);
+pub const xra_c:(&'static str,u8) = ("xra c",A9);
+pub const xra_d:(&'static str,u8) = ("xra d",AA);
+pub const xra_e:(&'static str,u8) = ("xra e",AB);
+pub const xra_h:(&'static str,u8) = ("xra h",AC);
+pub const xra_l:(&'static str,u8) = ("xra l",AD);
+pub const xra_m:(&'static str,u8) = ("xra m",AE);
+pub const xri_data:(&'static str,u8) = ("xri data",EE);
+pub const xthl_e3:(&'static str,u8) = ("xthl e3",1);
