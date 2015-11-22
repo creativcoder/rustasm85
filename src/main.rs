@@ -29,6 +29,14 @@ use opcode::*;
 const STATUS_SRC_VALID : u8 = 0;
 const STATUS_SRC_INVALID : u8 = 1;
 
+#[derive(Debug)]
+enum FL {
+	T=1,
+	F=0,
+}
+use FL::*;
+
+#[derive(Debug)]
 struct Cpu {
 	a:u8,
 	bc:(u8,u8),
@@ -39,11 +47,7 @@ struct Cpu {
 	flag:(FL,FL,FL,FL,FL,FL,FL,FL),
 }
 
-enum FL {
-	T=1,
-	F=0,
-}
-use FL::*;
+
 
 impl Cpu {
 	fn init() -> Self {
@@ -57,8 +61,7 @@ impl Cpu {
 			flag:(F,F,F,F,F,F,F,F),
 		}
 	}
-    fn execute(&mut self,code_line:&str) {
-    }
+    
 }
 
 enum TYPE {
@@ -87,51 +90,40 @@ fn incr_addr(addr:&u16) -> u16 {
 	addr+1
 }
 
-fn asm_linter(line:&str) -> bool {
-	// early return
-	if line.len() < 2 {return false;}
-	let ins_format:Regex = if line.len() > 5 {
-				// matches opcodes with an explicit data
-            	Regex::new(r"^\w+\s[ABCDEHLM],\s?((\d{2})|(\d{4}))h$").unwrap()
-            } else {
-            	// matches opcodes without an explicit data
-            	Regex::new(r"^(\w{1,4}\s[A-Z])|(\w{1,4})$").unwrap()
-            };
-            if ins_format.is_match(line) { true} else { false}
-	}
-
 fn opcode_fetch() {
+
 	// just for test
-	let opcode_list = vec!["LXI H","MVI A","MVI B","ADD B","HLT"];
+	let opcode_vec = vec!["LXI H","MVI A","MVI B","ADD B","HLT","JMP","CMP","SHLD","CMC"];
+	let mut opcode_list:HashMap<String,u8> = HashMap::new();
+	opcode_list.insert("LXI H".to_string(),1);
+	opcode_list.insert("MVI A".to_string(),2);
+	opcode_list.insert("MVI B".to_string(),3);
+	opcode_list.insert("ADD B".to_string(),4);
+	opcode_list.insert("HLT".to_string(),5);
+	let mut code_map:HashMap<String,u8> = HashMap::new();
 
 	match File::open("src/tests/src.asm") {
 		Ok(handle) => {
 			let mut addr = 2000u16;
-			let mut code_map = HashMap::new();
+			//let mut code_map = HashMap::new();
 			let mut status = STATUS_SRC_VALID;
 			let mut line_count = 0;
 			let mut l:String;
 			let mut reader = BufReader::new(handle);
 			let mut line = String::new();
+
             reader.read_line(&mut line);
             line_count+=1;
-            while line.trim() != ""{
+            while line.trim() != "" {
             	
             	// inner block
             	{	
-            		if asm_linter(line.trim()) && opcode_list.contains(&line.trim().split(",").nth(0).unwrap()) {
+            		if asm_lint(&line.trim().replace(" ","")) && opcode_vec.contains(&line.trim().split(",").nth(0).unwrap()) {
             			println!("ASM:Linter Status for line {} : Pass",line_count);
-            			// Todo
-            			l = line.to_owned();
-            			let tok:Vec<&str> = l.trim().split(",").collect();
-            			if tok.len() < 2 {
-            				let code_tup = ((tok[0]),"None");
-            				code_map.insert(incr_addr(&addr),code_tup);	
-            			} else {
-            				let code_tup = ((tok[0]),tok[1]);
-            				code_map.insert(incr_addr(&addr),code_tup);
-            			}
-            			
+            			let current_opcode = line.trim().split(",").nth(0).unwrap().to_owned();
+            			code_map.insert(current_opcode.to_owned(), 1);
+            			// dispatch current ins_code to controller
+            			controller((opcode_list.get(&current_opcode)).unwrap());
             		} else {
             			println!("Syntax Error at line {}",line_count);
             			status = STATUS_SRC_INVALID;
@@ -145,14 +137,47 @@ fn opcode_fetch() {
             // checking if source file is syntactically clean
             if status == STATUS_SRC_INVALID {
             	println!("Code contains syntax Errors.");
-            	code_map.clear();
+            	//code_map.clear();
             }
             else { // We are good to go
-            	let mut cpu = Cpu::init();
+            	//Compile sources here
             }
 		},
 		Err(why) => println!("Error opening src {:?}",why),
 	}
+
+	// the asm linter routine which does syntax analysis.
+	fn asm_lint(line:&str) -> bool {
+        // handling cases where line does not contain a comma
+    if !(line.contains(",")) {
+        if (line.len() == 5 && !(line.contains(" "))){
+            println!("Invalid Opcode");
+            false
+        }
+        else if ( line.len() > 5 ) {
+            println!("Invalid Opcode");
+            false
+        }
+        else {
+            true
+        }
+
+    } 
+    // handling cases where line contains a comma
+     else {
+        if(line.chars().last().unwrap() == ',') {
+            println!("Missing operand");
+            false
+        }
+        else if (line.split(",").nth(1).unwrap().len() > 5){
+            println!("Invalid operand");
+            false
+        }
+        else {
+            true
+        }
+    }
+}
 }
 
 fn _lxi_h(cpu:&mut Cpu) {
@@ -168,15 +193,29 @@ fn _mvi_b(cpu:&mut Cpu) {
 }
 
 fn _add_b(cpu:&mut Cpu) {
-	
+	// test
+	// initilize b with some value
+	cpu.bc.0 += 1;
+	// add to accumulator
+	cpu.a += cpu.bc.0;
+	println!("{:?}",cpu );
 }
 
 fn _hlt(cpu:&mut Cpu) {
 	
 }
 
-fn main() {
-	
-    opcode_fetch();
+// controller dispatches the instructions to mutate cpu state
+fn controller(ins_code:&u8) {
+	let mut cpu = Cpu::init();
+	// TODO
+	match ins_code {
+		&1 => _add_b(&mut cpu),
+		&2 => {},
+		&_ => {},
+	}
+}
 
+fn main() {
+    opcode_fetch();
 }
