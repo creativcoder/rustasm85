@@ -1,4 +1,12 @@
-pub const aci_data:(&'static str,u8) = ("aci data",CE);
+pub enum TYPE {
+	_1_BYTE,
+	_2_BYTE,
+	_3_BYTE,
+}
+
+use TYPE::*;
+
+pub const aci_data:(&'static str,u8,TYPE) = ("aci",CE);
 pub const adc_a:(&'static str,u8) = ("adc a",8F);
 pub const adc_b:(&'static str,u8) = ("adc b",88);
 pub const adc_c:(&'static str,u8) = ("adc c",89);
@@ -220,7 +228,7 @@ pub const sbi_data:(&'static str,u8) = ("sbi data",DE);
 pub const shld_address:(&'static str,u8) = ("shld address",22);
 pub const sim_30:(&'static str,u8) = ("sim",30);
 pub const sphl_f9:(&'static str,u8) = ("sphl",f9);
-pub const sta_address:(&'static str,u8) = ("sta address",32);
+pub const sta:(&'static str,u8) = ("sta",32);
 pub const stax_b:(&'static str,u8) = ("stax b",02);
 pub const stax_d:(&'static str,u8) = ("stax d",12);
 pub const stc_37:(&'static str,u8) = ("stc 37",1);
@@ -242,5 +250,5 @@ pub const xra_e:(&'static str,u8) = ("xra e",AB);
 pub const xra_h:(&'static str,u8) = ("xra h",AC);
 pub const xra_l:(&'static str,u8) = ("xra l",AD);
 pub const xra_m:(&'static str,u8) = ("xra m",AE);
-pub const xri_data:(&'static str,u8) = ("xri data",EE);
-pub const xthl_e3:(&'static str,u8) = ("xthl e3",1);
+pub const xri:(&'static str,u8) = ("xri",EE);
+pub const xthl:(&'static str,u8) = ("xthl",E3);

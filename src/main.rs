@@ -74,7 +74,15 @@ enum TYPE {
 	INVALID
 }
 
+
 use TYPE::*;
+
+struct Ins {
+	opcode:&'static str,
+	operand:Option<&'static str>,
+	_type:TYPE,
+}
+
 
 fn hex_code(line:Line) -> TYPE {
 	match line.len {
@@ -93,7 +101,7 @@ fn incr_addr(addr:&u16) -> u16 {
 	addr+1
 }
 
-fn opcode_fetch() {
+/*fn opcode_fetch() {
 
 	// just for test
 	let opcode_vec = vec!["LXI H","MVI A","MVI B","ADD B","HLT","JMP","CMP","SHLD","CMC"];
@@ -149,7 +157,7 @@ fn opcode_fetch() {
 		Err(why) => println!("Error opening src {:?}",why),
 	}
 
-}
+}*/
 
 fn _lxi_h(cpu:&mut Cpu) {
 	
@@ -188,5 +196,5 @@ fn controller(ins_code:&u8) {
 }
 
 fn main() {
-    opcode_fetch();
+    //opcode_fetch();
 }
