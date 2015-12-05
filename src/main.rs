@@ -3,8 +3,9 @@ extern crate regex;
 
 mod asm_gui;
 mod opcode;
+mod syntax;
 
-//use std::io::prelude::*;
+
 use std::thread::spawn;
 use std::collections::HashMap;
 use std::io::BufWriter;
@@ -25,6 +26,8 @@ use regex::Regex;
 
 use asm_gui::*;
 use opcode::*;
+use syntax::asm_lint;
+ 
 
 const STATUS_SRC_VALID : u8 = 0;
 const STATUS_SRC_INVALID : u8 = 1;
@@ -146,38 +149,6 @@ fn opcode_fetch() {
 		Err(why) => println!("Error opening src {:?}",why),
 	}
 
-	// the asm linter routine which does syntax analysis.
-	fn asm_lint(line:&str) -> bool {
-        // handling cases where line does not contain a comma
-    if !(line.contains(",")) {
-        if (line.len() == 5 && !(line.contains(" "))){
-            println!("Invalid Opcode");
-            false
-        }
-        else if ( line.len() > 5 ) {
-            println!("Invalid Opcode");
-            false
-        }
-        else {
-            true
-        }
-
-    } 
-    // handling cases where line contains a comma
-     else {
-        if(line.chars().last().unwrap() == ',') {
-            println!("Missing operand");
-            false
-        }
-        else if (line.split(",").nth(1).unwrap().len() > 5){
-            println!("Invalid operand");
-            false
-        }
-        else {
-            true
-        }
-    }
-}
 }
 
 fn _lxi_h(cpu:&mut Cpu) {
