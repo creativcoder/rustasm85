@@ -1,11 +1,6 @@
-/*pub enum _TYPE {
-	_1_BYTE,
-	_2_BYTE,
-	_3_BYTE,
-}
 
-use _TYPE::*;
-*/
+//! list of opcodes with their id's and hex code
+
 pub const aci:(&'static str,u16) = ("aci",0xCE);
 pub const adc_a:(&'static str,u16) = ("adc a",0x8F);
 pub const adc_b:(&'static str,u16) = ("adc b",0x88);
